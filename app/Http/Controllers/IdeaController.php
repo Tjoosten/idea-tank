@@ -60,12 +60,13 @@ class IdeaController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param  int  $id the idea id in the database.
      * @return \Illuminate\Http\Response
      */
     public function show($id)
     {
-        //
+        $data['idea'] = Idea::with('category')->find($id);
+        return view('idea.show', $data);
     }
 
     /**

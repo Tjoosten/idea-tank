@@ -31,6 +31,6 @@ class Idea extends Model
      */
     public function category()
     {
-        return $this->belongsTo('App\IdeaCategory', 'id', 'category');
+        return $this->belongsTo('App\IdeaCategory', 'category', 'id');
     }
 }
