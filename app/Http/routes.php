@@ -10,11 +10,6 @@
 | and give it the controller to call when that URI is requested.
 |
 */
-
-Route::get('/', function () {
-    return view('welcome');
-});
-
 Route::auth();
 Route::resource('idea', 'IdeaController');
 Route::get('/home', 'HomeController@index');
@@ -24,7 +19,10 @@ Route::get('/profile','AccountController@changeView')->name('profile.edit');
 Route::post('/profile', 'AccountController@changeMethod')->name('profile.update');
 
 // to-do item routes
+Route::get('/todo', 'TodoController@index')->name('todo.index');
 Route::get('/todo/destroy/{id}', 'TodoController@destroy')->name('todo.destroy');
 
 // Ideas routes.
+
+// Settings routing.
 

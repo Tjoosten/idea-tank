@@ -72,24 +72,27 @@ class IdeaController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param  int  $id the id from the idea in the database.
      * @return \Illuminate\Http\Response
      */
     public function edit($id)
     {
-        //
+        $data['idea'] = Idea::find($id);
+        return view('idea.edit', $data);
     }
 
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param  Requests\IdeaValidator $input
+     * @param  int $id the idea id in the database.
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Requests\IdeaValidator $input, $id)
     {
-        //
+        Idea::find($id)->update($input->except('_token'));
+        session()->flash('message', 'Idea has been updated');
+        return redirect()->back();
     }
 
     /**
