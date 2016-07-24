@@ -58,9 +58,9 @@
                             </a>
 
                             <ul class="dropdown-menu">
-                                <li><a href="">Idea (dev)</a></li>
-                                <li><a href="">Idea (hacking)</a></li>
-                                <li><a href="">idea (random)</a></li>
+                                <li><a href="{{ route('idea.index') }}">Idea (dev)</a></li>
+                                <li><a href="{{ route('idea.index') }}">Idea (hacking)</a></li>
+                                <li><a href="{{ route('idea.index') }}">Idea (random)</a></li>
                             </ul>
                         </li>
                     @endif
@@ -79,7 +79,11 @@
                             </a>
 
                             <ul class="dropdown-menu" role="menu">
-                                <li><a href=""><span class="fa fa-btn fa-cog"></span> Change account</a></li>
+                                <li>
+                                    <a href="{{ route('profile.edit') }}">
+                                        <span class="fa fa-btn fa-cog"></span> Change account
+                                    </a>
+                                </li>
                                 <li><a href="{{ url('/logout') }}"><i class="fa fa-btn fa-sign-out"></i>Logout</a></li>
                             </ul>
                         </li>
