@@ -15,6 +15,11 @@
                     <div class="panel panel-default">
                         <div class="panel-heading">
                             <strong><code>#{{ $idea->id }}</code> {{ $idea->title }}</strong>
+
+                            <span class="pull-right">
+                                <a href="" class="label label-primary"><span class="fa fa-chevron-left"></span></a>
+                                <a href="" class="label label-primary"><span class="fa fa-chevron-right"></span></a>
+                            </span>
                         </div>
 
                         <div class="panel-body">
