@@ -24,7 +24,7 @@ Route::get('/profile','AccountController@changeView')->name('profile.edit');
 Route::post('/profile', 'AccountController@changeMethod')->name('profile.update');
 
 // to-do item routes
-
+Route::get('/todo/destroy/{id}', 'TodoController@destroy')->name('todo.destroy');
 
 // Ideas routes.
 
