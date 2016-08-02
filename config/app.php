@@ -157,7 +157,8 @@ return [
         App\Providers\RouteServiceProvider::class,
         Collective\Html\HtmlServiceProvider::class,
         Barryvdh\Debugbar\ServiceProvider::class,
-        GrahamCampbell\GitHub\GitHubServiceProvider::class
+        GrahamCampbell\GitHub\GitHubServiceProvider::class,
+        Spatie\Backup\BackupServiceProvider::class,
     ],
 
     /*

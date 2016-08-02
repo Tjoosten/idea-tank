@@ -9,7 +9,8 @@
         "laravel/framework": "5.2.*",
         "laravelcollective/html": "^5.2",
         "barryvdh/laravel-debugbar": "^2.2",
-        "graham-campbell/github": "^4.4"
+        "graham-campbell/github": "^4.4",
+        "spatie/laravel-backup": "^3.8"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",
