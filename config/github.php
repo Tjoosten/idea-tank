@@ -22,7 +22,7 @@ return [
     |
     */
 
-    'default' => 'other',
+    'default' => env('GITHUB_CONNECTION','other'),
 
     /*
     |--------------------------------------------------------------------------
@@ -39,8 +39,8 @@ return [
     'connections' => [
 
         'main' => [
-            'token'   => 'your-token',
-            'method'  => 'token',
+            'token'   => env('GITHUB_TOKEN', 'your-token'),
+            'method'  => env('GITHUB_METHOD', 'token'),
             'cache'   => true,
             // 'backoff' => false,
             // 'logging' => Guzzle\Log\MessageFormatter::DEBUG_FORMAT,
@@ -49,9 +49,9 @@ return [
         ],
 
         'alternative' => [
-            'clientId'     => 'your-client-id',
-            'clientSecret' => 'your-client-secret',
-            'method'       => 'application',
+            'clientId'     => env('GITHUB_CLIENT_ID', 'your-client-id'),
+            'clientSecret' => env('GITHUB_CLIENT_SECRET', 'your-client-secret'),
+            'method'       => env('GITHUB_METHOD' ,'application'),
             'cache'        => true,
             // 'backoff'      => false,
             // 'logging'      => Guzzle\Log\MessageFormatter::DEBUG_FORMAT,
@@ -60,9 +60,9 @@ return [
         ],
 
         'other' => [
-            'username' => 'Tjoosten',
-            'password' => '',
-            'method'   => 'password',
+            'username' => env('GITHUB_USERNAME', 'Tjoosten'),
+            'password' => env('GITHUB_PASSWORD', 'password'),
+            'method'   => env('GITHUB_METHOD', 'password'),
             'cache'    => true,
             // 'backoff'  => false,
             // 'logging'  => Guzzle\Log\MessageFormatter::DEBUG_FORMAT,
